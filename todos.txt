@@ -1,0 +1,8 @@
+add rules/intructions
+add cube
+color name by rarity (see movies project)
+responsiveness
+sounds for runes
+music maybe
+d2 gifs next to container or title
+linear gradient bg?

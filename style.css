@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
-
+@font-face {
+  font-family: "diablolight";
+  src: url("./diablo_light-webfont.woff2") format("woff2"),
+    url("./diablo_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #222;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "diablolight", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,42 +23,48 @@ body {
 }
 
 h1 {
-  position: fixed;
-  top: 30px;
   font-size: 48px;
-  color: rgb(121, 10, 10);
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  color: rgb(141, 10, 10);
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.9);
+  margin: 25px 10px;
+  padding: 5px;
+  z-index: -1;
 }
 
 .rune-container {
+  top: 10%;
   background-color: #111;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border: 3px solid #000;
+  border: 4px solid #000;
   border-radius: 4px;
   width: 500px;
   height: 500px;
+  margin: 20px 10px;
+  z-index: 10;
 }
 
 #runeBtn {
   display: flex;
-  border: none;
-  background-color: transparent;
+  border: 3px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgb(141, 10, 10);
   align-items: center;
   justify-content: center;
   text-align: center;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
-  box-shadow: 2px 2px 4px 4px rgb(121, 10, 10);
-  color: rgb(121, 10, 10);
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.6);
+  color: #000;
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: bold;
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 200px;
   padding: 20px 10px;
-  margin: 100px 10px 0 10px;
+  margin: 50px 10px 0 10px;
   transform: scale(1);
   transition: transform 0.4s ease-out;
 }
@@ -65,9 +77,27 @@ h1 {
   outline: 0;
 }
 
+.cain {
+  cursor: pointer;
+  margin: 25px auto;
+  height: 200px;
+  border: 6px dashed #000;
+  border-radius: 50%;
+  opacity: 0.7;
+  transform: scale(0.9);
+  transition: transform 1.5s ease;
+}
+
+.cain:hover {
+  opacity: 1;
+  transform: scale(1);
+  border: 6px dashed rgb(141, 10, 10);
+}
+
 label {
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.6);
   letter-spacing: 1px;
   padding: 4px 8px;
   margin: 10px 5px;
@@ -83,6 +113,11 @@ label {
 
 .rune {
   position: relative;
+  cursor: pointer;
+}
+
+.rune p {
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 .rune img {

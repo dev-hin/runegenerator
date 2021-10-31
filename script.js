@@ -3,13 +3,14 @@ const runeContainer = document.querySelector('.rune-container')
 const runeSelect = document.getElementById('runeSelect')
 const runes = ["el", "eld", "tir", "nef", "eth", "ith", "tal", "ral", "ort", "thul", "amn", "sol", "shael", "dol", "hel", "io", "lum", "ko", "fal", "lem", "pul", "um", "mal", "ist", "gul", "vex", "ohm", "lo", "sur", "ber", "jah", "cham", "zod"]
 const rune = document.getElementById('rune')
+const cain = document.querySelector('.cain')
 
 // function getRandomRune() {
 //   const randomRune =  runes[Math.floor(Math.random() * runes.length)].repeat(3)
 //   console.log(randomRune);
 // }
 
-let runeCount = 6
+let runeCount = 18
 let randomRunes = []
 
 function getRunes() {
@@ -43,12 +44,23 @@ function clearRunes() {
   runeContainer.innerHTML = ""
 }
 
+function runeSound() {
+  var audio = new Audio('./audio/rune.wav');
+  audio.play();
+}
+
 runeBtn.addEventListener('click', () => {
   clearRunes()
   getRunes()
   generateRunes()
+  runeSound()
 })
 
 runeSelect.addEventListener('change', e => {
   runeCount = e.target.value
+})
+
+cain.addEventListener('click', () => {
+  var cainGreeting = new Audio('./audio/stayawhile.mp3');
+  cainGreeting.play();
 })
