@@ -156,8 +156,15 @@ label {
   }
 
   .rune-container {
-    height: 300px;
-    width: 300px;
+    height: 380px;
+    width: 380px;
+  }
+
+  .rune img {
+    height: 35px;
+    width: 35px;
+    margin: 0px 10px;
+    padding: 3px;
   }
 
   .cain {
@@ -185,8 +192,20 @@ label {
   }
 
   .rune-container {
-    height: 250px;
-    width: 250px;
+    height: 280px;
+    width: 280px;
+  }
+
+  .rune img {
+    height: 30px;
+    width: 30px;
+    margin: 0px 6px;
+    padding: 2px;
+  }
+
+  .rune p {
+    font-size: 16px;
+    padding: 10px;
   }
 
   .cain {
