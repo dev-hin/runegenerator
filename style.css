@@ -6,6 +6,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -147,4 +148,62 @@ label {
   transform: translateX(-50%);
   color: #fff;
   font-size: 1.3rem;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .rune-container {
+    height: 300px;
+    width: 300px;
+  }
+
+  .cain {
+    height: 150px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  #runeSelect {
+    font-size: 14px;
+  }
+
+  #runeBtn {
+    height: 40px;
+    width: 120px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .rune-container {
+    height: 250px;
+    width: 250px;
+  }
+
+  .cain {
+    height: 100px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  #runeSelect {
+    font-size: 12px;
+  }
+
+  #runeBtn {
+    height: 30px;
+    width: 100px;
+    font-size: 0.75rem;
+  }
 }
